@@ -1,8 +1,10 @@
 import React from "react";
-import Link from "../link/link";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
 // The class name must start with a capital character
-export default class Navbar extends React.Component {
+export default class Navbar0 extends React.Component {
   constructor() {
     super();
     console.log("From Constructor"); // <1>
@@ -17,16 +19,17 @@ export default class Navbar extends React.Component {
   render() {
     console.log("From Render"); // <2>
     return (
-      // <> </> -----> React fragments
       <>
-        <p>Hello World, from navbar component</p>
-        <p>Hello world again, using react fragment</p>
-        <p>Title: {this.state.title} </p>
-        <button onClick={() => this.changeState()}>Change state</button>
-        {/*  Reusable Components  */}
-        <Link name="Home" link="link_1" />
-        <Link name="About" link="link_2" />
-        <Link name="Contact Me" link="link_3" />
+        <Navbar bg="dark" variant="dark">
+          <Container>
+            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+            <Nav className="me-auto">
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#features">Features</Nav.Link>
+              <Nav.Link href="#pricing">Pricing</Nav.Link>
+            </Nav>
+          </Container>
+        </Navbar>
       </>
     );
   }
