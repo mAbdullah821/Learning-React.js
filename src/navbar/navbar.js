@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "../link/link";
 
 // The class name must start with a capital character
 export default class Navbar extends React.Component {
@@ -22,6 +23,10 @@ export default class Navbar extends React.Component {
         <p>Hello world again, using react fragment</p>
         <p>Title: {this.state.title} </p>
         <button onClick={() => this.changeState()}>Change state</button>
+        {/*  Reusable Components  */}
+        <Link name="Home" link="link_1" />
+        <Link name="About" link="link_2" />
+        <Link name="Contact Me" link="link_3" />
       </>
     );
   }
