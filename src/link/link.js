@@ -4,7 +4,7 @@ import "./link.css";
 export default function Link(props) {
   return (
     <>
-      <a class="link-component" href={props.link}>
+      <a className="link-component" href={props.link}>
         {props.name}
       </a>
     </>
